@@ -6,7 +6,7 @@
 
 ## 실행 방법
 
-ZIP을 해제하고 8개 파일을 같은 폴더에 둔다. 실제 NVD·CISA 연계를 사용하려면 Python 3 환경에서 로컬 서버를 실행한다.
+저장소의 `assetguard` 폴더가 웹앱 루트다. 실제 NVD·CISA 연계를 로컬에서 사용하려면 Python 3 환경에서 이 폴더 안의 서버를 실행한다.
 
 프로젝트 폴더에서 실행:
 
@@ -15,6 +15,8 @@ python server.py
 ```
 
 브라우저에서 http://127.0.0.1:8080 으로 접속한다. 서버 종료는 Ctrl+C. `NVD_API_KEY` 환경변수는 선택 사항이며 서버에서만 사용된다. 키가 없으면 NVD 공개 요청 제한이 적용되고 결과는 서버 메모리에 15분 캐시된다. 별도 패키지 설치는 필요하지 않다.
+
+Vercel에서는 저장소 루트의 `vercel.json`이 `assetguard`를 정적 출력 폴더로 지정하고, 저장소 루트 `api/real-vulnerabilities.py`가 실제 CVE API를 제공한다. `NVD_API_KEY`를 사용할 경우 Vercel 프로젝트의 Environment Variables에 등록한다. 브라우저 코드나 저장소에 키를 넣지 않는다.
 
 ## 파일 구성
 
