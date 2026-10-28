@@ -1,0 +1,31 @@
+# 시스템 및 편집기
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# 환경 및 비밀정보
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+
+# 도구·캐시·로그
+node_modules/
+__pycache__/
+*.pyc
+.cache/
+coverage/
+*.log
+
+# 시연 내보내기 및 실제 데이터
+assetguard-demo*.json
+uploads/
+private-data/
+
+# 로컬 호스팅 상태
+.wrangler/
